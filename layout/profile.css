@@ -1,0 +1,83 @@
+/* profile.css: aesthetic design for profile.php */
+
+/* Background and container */
+body.profile-page {
+  background: #f4f6fc;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+/* Form layout */
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.profile-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+.profile-form input {
+  margin-top: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-form input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+  outline: none;
+}
+
+/* Button styling */
+.profile-form .btn {
+  margin-top: 10px;
+  padding: 14px 0;
+  background: #ffffff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.profile-form .btn:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Success message */
+.success {
+  background: #e6ffed;
+  border: 1px solid #a1eac4;
+  color: #2a662a;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 20px;
+}

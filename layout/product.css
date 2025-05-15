@@ -1,0 +1,133 @@
+/* 1) Container: two columns, both stretch to the same height */
+.detail-container {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;   /* makes .detail-info match .detail-image height */
+  padding: 20px;
+}
+
+/* 2) Left: image box (red in your mock) */
+.detail-image {
+  width: 600px;            /* choose your desired container width */
+  height: 600px;           /* and height—now it never changes */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eee;        /* light grey fallback */
+}
+
+/* fill that box completely, cropping as needed */
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* cover always fills the container */
+  object-position: center;
+  display: block;
+}
+
+/* 3) Right: info box (white background) */
+.detail-info {
+  flex: 1;                /* 1/3 of the width */
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Title band (green in mock) */
+.detail-title {
+  padding: 10px;
+  background: rgb(0, 0, 0);       /* debug color, remove later */
+}
+.detail-title h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+/* Description band (red in mock), scrolls if too long */
+.detail-desc {
+  padding: 10px;
+  background: rgb(255, 255, 255);       /* debug color, remove later */
+  flex: 1 1 auto;         /* take all leftover space */
+  overflow-y: auto;       /* scroll internally if content overflows */
+}
+.detail-desc p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Meta band (black in mock) */
+.detail-meta {
+  padding: 10px;
+  background: #ffffff;       /* debug color, remove later */
+  color: #fff;
+  flex: 0 0 auto;         /* height determined by content */
+}
+.detail-meta p {
+  margin: 4px 0;
+  color: black;
+}
+.detail-meta p strong {
+  font-weight: bold;
+}
+
+/* Action band (blue in mock) */
+.detail-action {
+  padding: 10px;
+  background: rgb(0, 0, 0);       /* debug color, remove later */
+  flex: 0 0 auto;         /* height by content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-action .btn-buy {
+  display: inline-block;
+  width: 120px;           /* fixed button width */
+  text-align: center;
+  background: rgb(255, 255, 255);
+  color: #000000;
+  padding: 8px 0;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.detail-action .btn-buy:hover {
+  background-color: #bbd9bf;    /* darker green */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+ 
+  transition: all 0.2s ease;
+}
+.detail-meta .price {
+  text-align: center;     /* center it horizontally */
+  font-size: 1.4rem;      /* bump up the font size */
+  margin-top: 12px;   
+  color: green;    /* give it a bit of breathing room */
+}
+
+.detail-action {
+  display: flex;
+  align-items: center;
+}
+
+/* keep the label and number input on the left */
+.detail-action p,
+.detail-action .quantity-input {
+  margin: 0 10px 0 0;
+}
+
+/* center the button within the form */
+.detail-action .btn-buy {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* … */
+}
+
+
+.detail-action p { 
+  color: white;
+}
+.detail-action .quantity-input {
+  width: 5%;
+}

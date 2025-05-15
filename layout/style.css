@@ -1,0 +1,181 @@
+/* → reset & sizing */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { height:100%; font-family:'Segoe UI', sans-serif; }
+
+/* → full-page background image */
+body {
+  background: url("../images/backgroud-index-page.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* → center content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* → header */
+.header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.logo-img {
+  height: 50px;         /* tweak to your preferred logo height */
+  margin-right: 15px;   /* gap between logo and text */
+}
+
+/* keep your existing .logo styling, or adjust as needed */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+/* → hero layout */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 80px);
+  padding: 0 20px 0 100px;
+}
+.hero-text {
+  max-width: 500px;
+  color: #000000;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* → buttons */
+.buttons .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-right: 15px;
+
+  background: #fff;     /* white by default */
+  color: #111;          /* dark text */
+  border: 1px solid #ddd;
+}
+
+.buttons .btn:hover {
+  background: #ccc;     /* grey on hover */
+  color: #111;          /* keep text dark */
+}
+
+/* If you still need a secondary style (e.g. outline), you can do: */
+.btn-secondary {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.hero .hero-image {
+  flex: 0 0 50%;        /* left and right panels each 50% */
+  overflow: hidden;
+}
+.hero .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* scale & crop to fill */
+}
+
+/* → responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    margin-top: 30px;
+  }
+}
+
+/* ────────── Login page styles ────────── */
+.login-page .login-container {
+  display: flex;
+  height: 100vh;
+}
+
+.login-page .login-panel {
+   flex: 0 0 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page .form-wrapper {
+  width: 80%;
+  max-width: 360px;
+}
+
+.login-page .form-wrapper label,
+.login-page .form-wrapper input,
+.login-page .form-wrapper button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-page .form-wrapper label {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.login-page .form-wrapper input {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-page .form-wrapper button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.login-page .form-wrapper button:hover {
+  background: #eee;
+}
+
+.login-page .image-panel {
+  flex: 0 0 50%;
+  overflow: hidden;
+}
+.login-page .image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* scales & crops nicely */
+  object-position: right;     /* show the right side of the image */
+}
+
+/* you can also scope responsive tweaks here */
+@media (max-width: 768px) {
+  .login-page .login-container { flex-direction: column; }
+  .login-page .image-panel   { display: none; }
+  .login-page .login-panel    { height: 100vh; }
+}

@@ -1,0 +1,197 @@
+/* ===== admin.css ===== */
+
+body.admin-page {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  /* paper texture everywhere */
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat;     /* tile forever */
+  background-position: top left; /* start in the corner */
+  background-attachment: fixed;  /* optional: parallax / stays put */
+}
+
+/* container: sidebar + main */
+.admin-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ─── SIDEBAR ─── */
+.sidebar {
+  position: fixed;          /* stick it */
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;            /* full viewport height */
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 100;             /* stay above main content */
+}
+
+.sidebar-logo {
+  background: non;
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
+}
+
+.sidebar-logo img {
+  max-width: 50%;
+  height: auto;
+}
+
+.sidebar-nav {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-btn {
+  display: block;
+  width: 80%;
+  text-align: center;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  background: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #b4b2b2;
+}
+
+/* ─── MAIN CONTENT ─── */
+.main-content {
+  flex: 1;
+  min-height: 100vh;        /* at least full screen */
+  padding: 40px;
+  
+  /* the crumpled-paper texture */
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat;        /* tile forever  */
+  background-position: top left;
+  /* If you prefer a parallax / fixed effect, add this line: */
+  /* background-attachment: fixed;  */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+
+
+.main-content h1 {
+  margin: 0;
+  color: #111;
+  font-size: 2rem;
+  font-weight: normal;
+}
+/* Base & Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.admin-page {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container Layout */
+.admin-container {
+  display: flex;
+  flex-direction: row;
+  /* remove any height: 100vh here */
+  margin-left: 200px;       /* equal to sidebar width */
+}
+
+
+
+.main-content > h1 {
+  margin: 0;                   
+  padding: 0;                  
+  font-size: 2rem;             
+  color: #000000;
+  margin-right: 8%;
+}
+
+/* Error Message */
+.error {
+  background-color: #fdecea;
+  border: 1px solid #f5c6cb;
+  color: #a94442;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+/* Form */
+.admin-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: grid;
+  grid-gap: 20px;
+  flex: 0 0 auto;
+  max-width: 400px;             /* controls form width */
+  width: 100%;
+}
+
+.admin-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2c3e50;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="number"],
+.admin-form textarea {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+/* Submit Button */
+.btn-submit {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2980b9;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: start;
+  transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #3498db;
+}
